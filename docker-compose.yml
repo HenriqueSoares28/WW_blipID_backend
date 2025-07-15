@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  blip-luma-backend:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./static/videos:/app/static/videos
+    restart: unless-stopped
