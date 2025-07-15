@@ -1,7 +1,9 @@
+import os
 import requests
 
-API_KEY = "SUA_API_KEY"
+API_KEY = os.environ.get("LUMA_API_KEY")
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
+
 
 def upload_image_to_luma(image_path):
     with open(image_path, 'rb') as f:

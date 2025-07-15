@@ -1,6 +1,7 @@
+import os
 import requests
 
-BLIP_KEY = "SEU_TOKEN_BLIP_HTTP"
+BLIP_KEY = os.environ.get("BLIP_API_KEY")
 
 def send_video_to_user(user_id, video_url):
     headers = {
